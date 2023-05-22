@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Notify } from "notiflix/build/notiflix-notify-aio";
 import selectLowestPrice from "./selectLowestPrice";
+import spinnerControls from "./spinnerControls";
 
 const BASE_URL = "https://voodoo-sandbox.myshopify.com";
 let controller;
@@ -12,6 +13,7 @@ export default class FindProducts {
   }
 
   async fetchProducts() {
+    spinnerControls.showSpinner();
     this.errorValue = null;
     if (controller) controller.abort();
 
@@ -30,11 +32,13 @@ export default class FindProducts {
           image: product?.images[0]?.src ?? "https://placehold.co/400x400",
         };
       });
-      console.log(responseData);
+
       this.productsValues = responseData;
+      this.errorValue = null;
+      spinnerControls.hideSpinner();
     } catch (error) {
       this.errorValue = error;
-      console.log(this.errorValue);
+      spinnerControls.hideSpinner();
       Notify.failure("Whoops! Sorry, we have a problem!");
     }
   }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/public/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>VooDoo Test</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -18,10 +18,139 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
-    <div id="app"></div>
-    <section class="products"></section>
-    <script type="module" src="/src/index.js"></script>
+  <body data-open>
+    <header class="header">
+      <div class="header__logo">
+        <svg class="header__logo-img">
+          <use href="/src/images/sprite.svg#logo"></use>
+        </svg>
+        <p class="header__logo-text"></p>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-link">About us</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" class="header__sign-in">Sign-up</a>
+    </header>
+    <section class="products">
+      <div class="menu">
+        <button class="menu__toggle">
+          <p class="menu__toggle-warning">
+            <svg class="menu__toggle-warning-icon">
+              <use href="/src/images/sprite.svg#alert"></use>
+            </svg>
+            <span class="menu__toggle-warning-text">ALPHA</span>
+          </p>
+          <p class="menu__toggle-text">Important info regarding our service</p>
+          <svg class="menu__toggle-icon">
+            <use href="/src/images/sprite.svg#arrow"></use>
+          </svg>
+        </button>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#" class="menu__link"
+              >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,
+              in!</a
+            >
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+              dolorum!</a
+            >
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptatum, culpa.</a
+            >
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+              aliquid!</a
+            >
+          </li>
+        </ul>
+      </div>
+      <form class="sign-up-form">
+        <h2 class="sign-up-form__title">
+          Be the first one to know when we launch our beta!
+        </h2>
+        <div class="sign-up-form__group">
+          <label for="email" class="sign-up-form__label">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            class="sign-up-form__input"
+            placeholder="E-mail"
+          />
+        </div>
+        <button type="submit" class="sign-up-form__button">Sign-up</button>
+      </form>
+    </section>
+    <footer class="footer">
+      <div class="footer__logo">
+        <svg class="footer__logo-img">
+          <use href="/src/images/sprite.svg#logo-picture"></use>
+        </svg>
+      </div>
+      <ul class="footer__returns-list">
+        <li class="footer__returns-item">
+          <a href="#" class="footer__returns-link">FAQ</a>
+        </li>
+        <li class="footer__returns-item">
+          <a href="#" class="footer__returns-link">RETURNS</a>
+        </li>
+        <li class="footer__returns-item">
+          <a href="#" class="footer__returns-link">CONTACT</a>
+        </li>
+      </ul>
+      <ul class="footer__privacy-list">
+        <li class="footer__privacy-item">
+          <a href="#" class="footer__privacy-link">TERMS & CONDITIONS</a>
+        </li>
+        <li class="footer__privacy-item">
+          <a href="#" class="footer__privacy-link">PRIVACY POLICY</a>
+        </li>
+        <li class="footer__privacy-item">
+          <a href="#" class="footer__privacy-link">COOKIE POLICY</a>
+        </li>
+        <li class="footer__privacy-item">
+          <a href="#" class="footer__privacy-link">COOKIE SETTINGS</a>
+        </li>
+      </ul>
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
+          <a href="#" class="footer__social-link">ABOUT SECOND CHANCE</a>
+        </li>
+        <li class="footer__social-item">
+          <a href="#" class="footer__social-link">CAREER</a>
+        </li>
+        <li class="footer__social-item">
+          <a href="#" class="footer__social-link">FACEBOOK</a>
+        </li>
+        <li class="footer__social-item">
+          <a href="#" class="footer__social-link">INSTAGRAM</a>
+        </li>
+      </ul>
+    </footer>
+    <div class="spinner">
+      <div class="loading-wrapper">
+        <span class="dot-1"></span><span class="dot-2"></span
+        ><span class="dot-3"></span><span class="dot-4"></span
+        ><span class="dot-5"></span><span class="dot-6"></span
+        ><span class="dot-7"></span><span class="dot-8"></span
+        ><span class="dot-9"></span><span class="dot-10"></span
+        ><span class="dot-11"></span>
+        <p class="loading">Loading</p>
+      </div>
+    </div>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

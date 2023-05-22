@@ -1,5 +1,5 @@
-import DrawProducts from "./js/drawProductsGrid";
-import FindProducts from "./js/findProducts";
+import DrawProducts from "./src/js/drawProductsGrid";
+import FindProducts from "./src/js/findProducts";
 
 const products = new FindProducts();
 
