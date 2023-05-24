@@ -1,7 +1,6 @@
 export default class DropdownController {
   constructor(selector, hidden = false) {
     this.refs = this.getRefs(selector);
-
     hidden && this.hide();
   }
 
@@ -11,11 +10,13 @@ export default class DropdownController {
     return refs;
   }
 
-  show() {
-    this.refs.dropdownItem.classList.remove("is-hidden");
+  toggle() {
+    this.refs.dropdownItem.classList.toggle("h-0");
+    this.refs.dropdownItem.classList.toggle("p-6");
   }
 
   hide() {
-    this.refs.dropdownItem.classList.add("is-hidden");
+    this.refs.dropdownItem.classList.add("h-0");
+    this.refs.dropdownItem.classList.remove("p-6");
   }
 }

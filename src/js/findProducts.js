@@ -7,6 +7,9 @@ const BASE_URL = "https://voodoo-sandbox.myshopify.com";
 let controller;
 
 export default class FindProducts {
+  #products;
+  #error;
+
   constructor() {
     this.products = [];
     this.error = null;
