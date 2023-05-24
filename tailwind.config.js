@@ -4,10 +4,11 @@ export default {
   theme: {
     extend: {
       screens: {
+        ss: "1px",
         sm: "390px",
-        xl: "1200px",
+        md: "768px",
+        xl: "1512px",
       },
-      container: { sm: "390px", xl: "1512px" },
       fontFamily: {
         sans: ["Space Grotesk"],
         mono: ["Space Mono"],
@@ -59,6 +60,7 @@ export default {
         24: "6rem",
         25: "6.25rem",
         28: "7rem",
+        30: "7.5rem",
         32: "8rem",
         36: "9rem",
         40: "10rem",
@@ -83,7 +85,10 @@ export default {
         btnBg: "#ED5E21",
       }),
       gridTemplateColumns: {
-        products: "repeat(auto-fill, minmax(300px, 1fr))",
+        productsS: "repeat(auto-flow, minmax(300px, 1fr))",
+        productsSM: "repeat(auto-flow, minmax(300px, 1fr))",
+        productsM: "repeat(2, minmax(300px, 1fr))",
+        productsXL: "repeat(4, minmax(300px, 1fr))",
       },
       gridAutoRows: {
         "1fr": "1fr",
